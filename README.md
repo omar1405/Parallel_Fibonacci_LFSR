@@ -1,5 +1,5 @@
 # Parallel_Fibonacci_LFSR
-This module can generate M RNG values in the same cycle, each of N-bits, utilizing XOR-based maximal Fibonacci LFSRs. The design was made during my FYP graduation project in 2023. I cleaned it a bit and uploaded it on GitHub, with its testbench. 
+This module can generate M RNG values in the same cycle, each of N-bits, utilizing XOR-based maximal Fibonacci LFSRs. The design was part of my Bachelor's graduation project in 2023. I cleaned it a bit and uploaded it on GitHub, with its testbench. 
 
 
 ## Module Top View
