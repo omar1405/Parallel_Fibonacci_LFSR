@@ -17,9 +17,9 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 | Parameter      | #Bits  | Description                | Range          |  Notes  |
 |:-------------- |:------:|:--------------------------:|:--------------:|:-------:|
 |`LFSR_N`        | -      |Number of bits of base LFSR.|[1,inf)         |         | 
-|`LFSR_M`        | -      |Number of bits of base LFSR.|[1,2^LFSR_N-1]  | [^2],[^3],[^4]|
-|`LFSR_P`        |`LFSR_N`|Number of bits of base LFSR.|[1,2^LFSR_N-1]  | [^5]    |
-|`LFSR_R`        |`LFSR_N`|Number of bits of base LFSR.| !=0            |         |
+|`LFSR_M`        | -      |Number of output words each cycle.|[1,2^LFSR_N-1]  | [^2],[^3],[^4]|
+|`LFSR_P`        |`LFSR_N`|Defines the feedback polynomial mask.|[1,2^LFSR_N-1]  | [^5]    |
+|`LFSR_R`        |`LFSR_N`|Reset Value; Cannot be 0 since XOR is being used in this design.| !=0            |         |
 
 
 **Module Top View:-**
@@ -31,12 +31,12 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 ![alt text](/custom_parallel_lfsr_internal.drawio.png "Internal View")
 
 **References:-**
-1. All possible LFSR_P values for LFSR_N < 65 : https://users.ece.cmu.edu/~koopman/lfsr/
-2. Number of possible LFSR_P  for LFSR_N < 37 : https://oeis.org/A011260
-3. Other HW implementations   for LFSR_N < 168: https://docs.xilinx.com/v/u/en-US/xapp052
+1. All possible LFSR_P values for `LFSR_N` < 65 : https://users.ece.cmu.edu/~koopman/lfsr/
+2. Number of possible LFSR_P  for `LFSR_N` < 37 : https://oeis.org/A011260
+3. Other HW implementations   for `LFSR_N` < 168: https://docs.xilinx.com/v/u/en-US/xapp052
 
 Notes:
-1. Output pins are made as vector instead of 2D-Array due to Verilog Limitations.
+1. Output pins are made as a vector instead of a 2D-Array due to Verilog Limitations.
 2. Bigger values result in repetition.
 3. This directly defines the number of combinational LFSRs.
 4. For `LFSR_M` > 1, the base LFSR0's feedback is the (LFSR_M-1)'s value, i.e. the last LFSR.
