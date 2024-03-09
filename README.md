@@ -33,7 +33,7 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 1. Output pins are made as a vector instead of a 2D array due to Verilog Limitations.
 2. Bigger values result in repetition.
 3. This directly defines the number of combinational LFSRs.
-4. For `LFSR_M` > 1, the base LFSR0's feedback is the (LFSR_M-1)'s value, i.e. the last LFSR.
+4. For `LFSR_M` > 1, the internal base register `LFSR0`'s feedback is the (`LFSR_M`-1)'s value, i.e. the last LFSR.
 5. Quick Reference: https://users.ece.cmu.edu/~koopman/lfsr/
 
 
@@ -43,7 +43,7 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 
 
 ## References
-1. All possible LFSR_P values for `LFSR_N` < 65 : https://users.ece.cmu.edu/~koopman/lfsr/
-2. Number of possible LFSR_P  for `LFSR_N` < 37 : https://oeis.org/A011260
+1. All possible `LFSR_P` values for `LFSR_N` < 65 : https://users.ece.cmu.edu/~koopman/lfsr/
+2. Number of possible `LFSR_P`  for `LFSR_N` < 37 : https://oeis.org/A011260
 3. Other HW implementations   for `LFSR_N` < 168: https://docs.xilinx.com/v/u/en-US/xapp052
 
