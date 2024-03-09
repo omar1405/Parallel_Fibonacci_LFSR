@@ -14,12 +14,12 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 
 **Parameters:-**
 
-| Parameter      | #Bits  | Description                | Range          |  Notes  |
-|:-------------- |:------:|:--------------------------:|:--------------:|:-------:|
-|`LFSR_N`        | -      |Number of bits of base LFSR.|[1,inf)         |         | 
-|`LFSR_M`        | -      |Number of output words each cycle.|[1,2^LFSR_N-1]  | [^2],[^3],[^4]|
-|`LFSR_P`        |`LFSR_N`|Defines the feedback polynomial mask.|[1,2^LFSR_N-1]  | [^5]    |
-|`LFSR_R`        |`LFSR_N`|Reset Value; Cannot be 0 since XOR is being used in this design.| !=0            |         |
+| Parameter      | #Bits  | Description                                                    | Range                |  Notes          |
+|:-------------- |:------:|:--------------------------------------------------------------:|:--------------------:|:---------------:|
+|`LFSR_N`        | -      |Number of bits of base LFSR.                                    |$[1,inf)$             |                 | 
+|`LFSR_M`        | -      |Number of output words each cycle.                              |$[1,2^{`LFSR_N`}-1]$  | [^2],[^3],[^4]  |
+|`LFSR_P`        |`LFSR_N`|Defines the feedback polynomial mask.                           |$[1,2^{`LFSR_N`}-1]$  | [^5]            |
+|`LFSR_R`        |`LFSR_N`|Reset Value; Cannot be 0 since XOR is being used in this design.| $!=0$                |                 |
 
 
 **Module Top View:-**
