@@ -33,6 +33,6 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
         -o_LFSR_val   :   RNG values, each N-bits is an LFSR output word. Size:[M*N-1:0]
 
 **References:-**
--All possible LFSR_P values for LFSR_N < 65  : https://users.ece.cmu.edu/~koopman/lfsr/
--Number of possible LFSR_P  for LFSR_N < 37  : https://oeis.org/A011260
--Other HW implementations   for LFSR_N < 168 : https://docs.xilinx.com/v/u/en-US/xapp052
+1. All possible LFSR_P values for LFSR_N < 65 : https://users.ece.cmu.edu/~koopman/lfsr/
+2. Number of possible LFSR_P  for LFSR_N < 37 : https://oeis.org/A011260
+3. Other HW implementations   for LFSR_N < 168: https://docs.xilinx.com/v/u/en-US/xapp052
