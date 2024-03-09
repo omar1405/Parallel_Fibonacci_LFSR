@@ -9,7 +9,7 @@ This module can generate M RNG values in the same cycle, each of N-bits, utilizi
 | `i_rst_n`      |  in   |   1   | Negative-edge Asynchronous Reset.          |
 | `i_LFSR_enable`|  in   |   1   | Enable Signal for the whole module.        |
 | `i_LFSR_load`  |  in   |   1   | Load signal to insert a seed for the LFSR. |
-| `i_LFSR_seed`  |  in   |   N   | Seed to be loaded, if i_LFSR_load is high. |
+| `i_LFSR_seed`  |  in   |   N   | Seed to be loaded, if `i_LFSR_load` is high. |
 | `o_LFSR_val`   |  out  |  M*N  | Every N-bits represent an RNG/LFSR word[^1]|
 
 **Parameters:-**
